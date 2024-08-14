@@ -1,4 +1,4 @@
-import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
+import { animate, group, keyframes, query, state, style, transition, trigger } from '@angular/animations';
 
 export const highlightedStateTrigger = trigger('highlightedState', [
   state('default', style({
@@ -54,5 +54,68 @@ export const filterTrigger = trigger('filterAnimation', [
     animate('400ms cubic-bezier(.13,.9,.8,.1)', style({
       opacity: 0, width: 0
     }))
+  ])
+])
+
+export const formButtonTrigger = trigger('formButton', [
+  transition('invalid => valid', [
+    query('#botao-salvar', [
+      group([
+        animate(200, style({
+          backgroundColor: '#63b77c',
+        })),
+        animate(100, style({
+          transform: 'scale(1.1)'
+        })),
+      ]),
+      animate(200, style({
+        transform: 'scale(1)'
+      }))
+    ]),
+  ]),
+  transition('valid => invalid', [
+    query('#botao-salvar', [
+      group([
+        animate(200, style({
+          backgroundColor: '#6c757d',
+        })),
+        animate(100, style({
+          transform: 'scale(1.1)'
+        })),
+      ]),
+      animate(200, style({
+        transform: 'scale(1)'
+      }))
+    ]),
+  ])
+])
+
+export const flyInOutTrigger = trigger('flyInOut', [
+  transition(':enter', [
+    style({
+      width: '100%',
+      transform: 'translateX(-100%)',
+      opacity: 0
+    }),
+    group([
+      animate('0.3s 0.1s ease', style({
+        transform: 'translateX(0)',
+        width: '*'
+      })),
+      animate('0.3s ease', style({
+        opacity: 1
+      }))
+    ])
+  ]),
+  transition(':leave', [
+    group([
+      animate('0.3s ease', style({
+        transform: 'translateX(100%)',
+        width: '*'
+      })),
+      animate('0.3s 0.2s ease', style({
+        opacity: 0
+      }))
+    ])
   ])
 ])

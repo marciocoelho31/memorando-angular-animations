@@ -8,7 +8,9 @@ import {
   finalizeStateTrigger, 
   highlightedStateTrigger, 
   shownStateTrigger,
-  filterTrigger 
+  filterTrigger,
+  formButtonTrigger,
+  flyInOutTrigger
 } from '../animations';
 
 @Component({
@@ -19,7 +21,9 @@ import {
     highlightedStateTrigger, 
     shownStateTrigger, 
     finalizeStateTrigger, 
-    filterTrigger
+    filterTrigger,
+    formButtonTrigger,
+    flyInOutTrigger
   ]
 })
 export class ListaTarefasComponent implements OnInit {
