@@ -25,19 +25,12 @@
       "id": "5",
       "descricao": "Trocar lâmpada",
       "categoria": "Casa",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "prioridade": "Alta"
     },
     {
       "id": "6",
       "descricao": "Ler",
-      "statusFinalizado": true,
-      "categoria": "Estudos",
-      "prioridade": "Alta"
-    },
-    {
-      "id": "bWGE9_M",
-      "descricao": "aaaaaaaaaaaaaa",
       "statusFinalizado": false,
       "categoria": "Estudos",
       "prioridade": "Alta"
@@ -45,8 +38,22 @@
     {
       "id": "NnvTQuz",
       "descricao": "teste 2",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "categoria": "Casa",
+      "prioridade": "Alta"
+    },
+    {
+      "id": "BIxw50D",
+      "descricao": "sadasda",
+      "statusFinalizado": true,
+      "categoria": "Casa",
+      "prioridade": "Alta"
+    },
+    {
+      "id": "ayp9wKL",
+      "descricao": "abcd",
+      "statusFinalizado": true,
+      "categoria": "Trabalho",
       "prioridade": "Alta"
     }
   ]

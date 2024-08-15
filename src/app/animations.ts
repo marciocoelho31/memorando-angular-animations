@@ -33,7 +33,7 @@ export const shownStateTrigger = trigger('shownState', [
 ])
 
 export const finalizeStateTrigger = trigger('finalizeState', [
-  transition('* => finalized', [
+  transition('* => true', [
     animate('400ms ease-in', style({
       transform: 'scale(0.4)',
       opacity: 0
